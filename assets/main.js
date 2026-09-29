@@ -105,7 +105,7 @@
         </div>
         <aside class="profile-card reveal" aria-label="个人信息卡">
           <div class="portrait-wrap">
-            <img src="${path(profile.photo)}" alt="${escapeHtml(profile.nameEn)}的头像占位插画">
+            <img src="${path(profile.photo)}" alt="${escapeHtml(profile.nameEn)}的个人照片">
             <span class="availability-dot" title="${escapeHtml(profile.status)}"></span>
           </div>
           <div class="profile-card-body">

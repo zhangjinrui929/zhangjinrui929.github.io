@@ -6,7 +6,7 @@ window.SITE_DATA = {
     headlineFirst: "Jinrui",
     headlineLast: "Zhang",
     initials: "JZ",
-    photo: "assets/avatar-placeholder.svg",
+    photo: "assets/profile-photo.png",
     role: "香港科技大学数学系 · 博士后研究员",
     affiliation: "香港科技大学 · 数学系",
     location: "中国香港",
@@ -19,7 +19,8 @@ window.SITE_DATA = {
       { label: "Email", href: "mailto:jinruizhang@ust.hk" },
       { label: "Google Scholar", href: "https://scholar.google.com/citations?user=vPo_tkkAAAAJ&hl=zh-CN" },
       { label: "arXiv", href: "https://arxiv.org/search/?query=Jinrui+Zhang&searchtype=author" },
-      { label: "FMM Code", href: "https://gitee.com/lai123jun/adaptive_fmm" }
+      { label: "FMM Code", href: "https://gitee.com/lai123jun/adaptive_fmm" },
+      { label: "zhihu", href: "https://www.zhihu.com/people/zhang-jin-rui-58-26" }
     ]
   },
   news: [
