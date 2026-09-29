@@ -1,0 +1,26 @@
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">二维波散射示意图</title>
+  <desc id="desc">左侧平面入射波照射一个圆形散射体，右侧向外传播散射波。</desc>
+  <rect width="1200" height="680" fill="#E9EDE6"/>
+  <path d="M80 116H1120M80 564H1120" stroke="#B5C5B8" stroke-width="2" stroke-dasharray="8 12"/>
+  <g stroke="#2E6E5B" stroke-width="4" opacity=".75">
+    <path d="M145 180C265 280 265 400 145 500"/>
+    <path d="M205 180C325 280 325 400 205 500"/>
+    <path d="M265 180C385 280 385 400 265 500"/>
+    <path d="M325 180C445 280 445 400 325 500"/>
+  </g>
+  <path d="M388 340H492" stroke="#1A1E18" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M615 220C668 240 703 282 718 340C707 398 669 444 615 462" fill="#1E604F"/>
+  <path d="M610 220C538 230 496 278 493 340C496 405 541 452 615 462" fill="#1E604F"/>
+  <path d="M584 240C651 272 671 402 584 446" stroke="#B8FF66" stroke-width="3" opacity=".85"/>
+  <g stroke="#7AB497" stroke-width="3" opacity=".9">
+    <path d="M740 145C906 225 907 455 740 535"/>
+    <path d="M790 108C1020 219 1020 461 790 572"/>
+    <path d="M845 76C1128 219 1128 461 845 604"/>
+  </g>
+  <path d="M721 340H813" stroke="#1A1E18" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="154" y="613" fill="#1A1E18" font-family="Georgia,serif" font-style="italic" font-size="29">incident wave</text>
+  <text x="525" y="613" fill="#1A1E18" font-family="Georgia,serif" font-style="italic" font-size="29">scatterer D</text>
+  <text x="841" y="613" fill="#1A1E18" font-family="Georgia,serif" font-style="italic" font-size="29">scattered wave</text>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1L11 6L1 11" fill="none" stroke="#1A1E18" stroke-width="2"/></marker></defs>
+</svg>
