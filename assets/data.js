@@ -53,7 +53,7 @@ window.SITE_DATA = {
     { year: "2022", type: "Journal", title: "Fast inverse elastic scattering of multiple particles in three dimensions", authors: "Jun Lai, Jinrui Zhang", venue: "Inverse Problems, 38: 104002", note: "Cover article", featured: false, links: [{ label: "DOI", href: "https://doi.org/10.1088/1361-6420/ac8ac7" }, { label: "arXiv", href: "https://arxiv.org/abs/2204.03302" }] }
   ],
   posts: [
-    { slug: "wave-scattering-notes", title: "示意博客：从 Helmholtz 方程看波散射", excerpt: "用一个最简单的模型展示如何在博客里插入公式、示意图、图注和论文链接。", date: "2026-09-29", dateLabel: "示意文章 · 2026.09", readTime: "5 min", tags: ["示意文章", "波散射"], href: "blog/wave-scattering-notes.html", featured: true },
-    { slug: "layered-media-notes", title: "示意博客：层状介质中的多粒子问题", excerpt: "一篇带图片与行间公式的写作示范，说明如何介绍研究背景和引用自己的预印本。", date: "2026-09-29", dateLabel: "示意文章 · 2026.09", readTime: "6 min", tags: ["示意文章", "层状介质"], href: "blog/layered-media-notes.html", featured: true }
+    { slug: "wave-scattering-notes", title: "示意博客：从 Helmholtz 方程看波散射", excerpt: "用一个最简单的模型展示如何在博客里插入公式、示意图、图注和论文链接。", date: "2026-09-29", dateLabel: "示意文章 · 2026.09", readTime: "5 min", tags: ["示意文章", "波散射"], href: "blog/post.html?slug=wave-scattering-notes", featured: true },
+    { slug: "layered-media-notes", title: "示意博客：层状介质中的多粒子问题", excerpt: "一篇带图片与行间公式的写作示范，说明如何介绍研究背景和引用自己的预印本。", date: "2026-09-29", dateLabel: "示意文章 · 2026.09", readTime: "6 min", tags: ["示意文章", "层状介质"], href: "blog/post.html?slug=layered-media-notes", featured: true }
   ]
 };

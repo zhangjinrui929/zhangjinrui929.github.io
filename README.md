@@ -1,6 +1,8 @@
 # Jinrui Zhang · Academic Homepage
 
-静态学术主页，包含研究方向、近期动态、论文列表和带图片/公式的博客示例。无需安装依赖，可直接打开 `index.html` 本地预览，也可发布到 GitHub Pages。
+静态学术主页，包含研究方向、近期动态、论文列表和带图片/公式的博客示例。首页可直接打开 `index.html` 预览；Markdown 博客需要通过本地预览服务或 GitHub Pages 打开。
+
+发布到 GitHub Pages 时请保留仓库根目录的 `.nojekyll`，确保博客的 `.md` 正文作为原始文件提供给浏览器。
 
 首次使用请阅读 [网站使用教程](网站使用教程.md)，其中包含修改资料、增加论文和博客、插入图片与数学公式，以及部署到 GitHub Pages 的分步说明。
 

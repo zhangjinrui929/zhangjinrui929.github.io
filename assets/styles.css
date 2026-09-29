@@ -1122,6 +1122,37 @@ p {
   background: var(--card);
 }
 
+.article-content p > img {
+  width: 100%;
+  height: auto;
+  margin: 1em 0 0;
+  border: 1px solid var(--line-strong);
+  background: var(--card);
+}
+
+.article-content p:has(> img) {
+  margin-bottom: 0;
+}
+
+.article-content p:has(> img) + p > em:only-child {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  text-align: center;
+}
+
+.article-content pre {
+  overflow-x: auto;
+  margin: 1.8em 0;
+  padding: 18px 20px;
+  background: var(--paper-deep);
+}
+
+.article-content pre code {
+  padding: 0;
+  background: transparent;
+}
+
 .article-content figcaption {
   margin-top: 10px;
   color: var(--ink-soft);
