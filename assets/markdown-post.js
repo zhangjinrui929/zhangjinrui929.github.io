@@ -82,12 +82,24 @@
       content.innerHTML = window.DOMPurify.sanitize(html);
 
       // 相对路径以 .md 所在目录为准，兼容 VS Code 预览和 GitHub Pages。
-      content.querySelectorAll("img[src], a[href]").forEach((element) => {
-        const attribute = element.tagName === "IMG" ? "src" : "href";
-        const value = element.getAttribute(attribute);
-        if (value && !/^(?:[a-z][a-z\d+.-]*:|\/\/|\/|#)/i.test(value)) {
-          element.setAttribute(attribute, new URL(value, markdownUrl).href);
-        }
+      const mediaAttributes = [
+        ["img[src], video[src], video source[src], video track[src]", "src"],
+        ["video[poster]", "poster"],
+        ["a[href]", "href"]
+      ];
+      mediaAttributes.forEach(([selector, attribute]) => {
+        content.querySelectorAll(selector).forEach((element) => {
+          const value = element.getAttribute(attribute);
+          if (value && !/^(?:[a-z][a-z\d+.-]*:|\/\/|\/|#)/i.test(value)) {
+            element.setAttribute(attribute, new URL(value, markdownUrl).href);
+          }
+        });
+      });
+      // source 的地址修正后重新选择媒体资源；保留清理器默认的安全过滤。
+      content.querySelectorAll("video").forEach((video) => {
+        video.controls = true;
+        video.playsInline = true;
+        video.load();
       });
 
       window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };

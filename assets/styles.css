@@ -1126,6 +1126,15 @@ p {
   background: var(--card);
 }
 
+.article-content video {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--line-strong);
+  background: var(--card);
+}
+
 .article-content p > img {
   width: 100%;
   height: auto;
