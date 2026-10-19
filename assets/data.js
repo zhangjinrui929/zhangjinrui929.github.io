@@ -12,8 +12,8 @@ window.SITE_DATA = {
     location: "中国香港",
     email: "jinruizhang@ust.hk",
     status: "从事波散射与计算反问题研究",
-    intro: "我研究波散射与反散射中的数学问题，关注快速数值算法、边界积分方程，以及层状介质中的多粒子成像。目前在香港科技大学数学系从事博士后研究。",
-    introEn: "I work on wave scattering and inverse scattering, with interests in fast algorithms, boundary integral equations, and computational imaging in layered media.",
+    intro: "我的研究主要围绕波散射与反问题，关注复杂介质中波传播的高精度数值计算、快速算法及其理论分析，并研究选择性聚焦、统计成像与分辨率问题。",
+    introEn: "My research focuses on wave scattering and inverse problems, including high-accuracy numerical methods, fast algorithms, and their theoretical analysis for wave propagation in complex media. I also study selective focusing, statistical imaging, and resolution analysis.",
     keywords: ["Wave Scattering", "Inverse Problems", "Fast Algorithms", "Computational Imaging"],
     links: [
       { label: "Email", href: "mailto:jinruizhang@ust.hk" },
@@ -27,12 +27,12 @@ window.SITE_DATA = {
     { date: "2025.12", text: "获得浙江大学 2025 年优秀博士学位论文。", linkLabel: "查看经历", href: "index.html#journey" }
   ],
   research: [
-    { number: "01", title: "波散射与反散射", titleEn: "Wave & Inverse Scattering", description: "研究声波和弹性波与多个散射体的相互作用，并利用远场测量反演未知目标的位置与形状。", tags: ["Multiple Scattering", "Inverse Problems"] },
-    { number: "02", title: "快速数值算法", titleEn: "Fast Numerical Algorithms", description: "结合快速多极方法、散射矩阵和边界积分方程，构造适用于复杂几何与大规模粒子系统的高效求解器。", tags: ["FMM", "Integral Equations"] },
-    { number: "03", title: "计算成像与聚焦", titleEn: "Computational Imaging", description: "关注层状介质中的选择性聚焦、时间反演与贝叶斯反演，以及数值方法的精度和收敛性。", tags: ["Time Reversal", "Layered Media"] }
+    { number: "01", title: "波散射的高精度计算与快速算法", titleEn: "High-order Numerical Methods & Fast Algorithms", description: "研究波散射问题的高精度数值离散与高效求解，发展基于边界积分方程、快速多极算法和降阶模型的计算方法，关注三维弹性波多粒子散射及复杂介质中的大规模计算。", tags: ["Multiple Scattering", "Layered Media"] },
+    { number: "02", title: "复杂介质中的反问题与波成像", titleEn: "Inverse Problems & Wave Imaging", description: "研究多粒子系统及分层介质中的散射反问题，包括选择性聚焦、统计成像及其分辨率分析。", tags: ["Selective focusing", "Computational Imaging"] },
+    { number: "03", title: "散射数值方法的收敛性与误差分析", titleEn: "Convergence & Error Analysis for Scattering Problems", description: "研究波散射数值方法的数学基础，包括三维多体散射中多极展开方法的收敛性分析，以及降阶模型的算法设计与理论分析。", tags: ["Convergence Analysis", "Reduced-order model"] }
   ],
   journey: [
-    { period: "2025.07 — 至今", title: "博士后研究员", place: "香港科技大学 · 数学系", detail: "合作导师：张海教授" },
+    { period: "2025.07 — 至今", title: "博士后", place: "香港科技大学 · 数学系", detail: "合作导师：张海教授" },
     { period: "2020.09 — 2025.06", title: "计算数学博士", place: "浙江大学 · 数学科学学院", detail: "导师：赖俊教授" },
     { period: "2016.09 — 2020.06", title: "信息与计算科学学士", place: "南京理工大学", detail: "" }
   ],
