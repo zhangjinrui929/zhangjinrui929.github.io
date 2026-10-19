@@ -1,1 +1,5 @@
 .DS_Store
+
+# 本机双击预览入口，不上传到 GitHub。
+/打开本地主页.command
+/打开本地主页.app/
