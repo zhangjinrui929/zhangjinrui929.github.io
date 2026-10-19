@@ -70,7 +70,8 @@
 
   const markdownUrl = new URL(`posts/${encodeURIComponent(slug)}.md`, window.location.href);
 
-  fetch(markdownUrl)
+  // 重新验证正文缓存，避免更新后继续展示旧文章。
+  fetch(markdownUrl, { cache: "no-cache" })
     .then((response) => {
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       return response.text();

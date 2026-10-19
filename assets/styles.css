@@ -1004,6 +1004,10 @@ p {
   padding: 100px 0 130px;
 }
 
+.article-shell > article {
+  min-width: 0;
+}
+
 .article-aside {
   position: sticky;
   top: 112px;
