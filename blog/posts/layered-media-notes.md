@@ -281,5 +281,3 @@ $$
 - [DLR：合成孔径雷达教程](https://elib.dlr.de/82313/1/SAR-Tutorial-March-2013.pdf)：雷达成像的背景。
 - [Cambridge：反问题讲义](https://www.damtp.cam.ac.uk/research/cia/files/teaching/Inverse_Problems_2020/LectureNotes2020.pdf)：适定性与正则化。
 - [The Sound of Water](https://arxiv.org/abs/2411.11222)：从倒水声音推断物理属性的研究。
-
-前两张图是原创概念示意；第三张图由随文脚本计算生成。本文采用理想化模型用于科普，不把日常经验判断写成确定性检测方法，也不把教学算例当作真实工程或论文实验。

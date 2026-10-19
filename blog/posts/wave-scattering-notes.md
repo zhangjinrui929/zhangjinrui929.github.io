@@ -386,5 +386,3 @@ $$
 - [OpenStax：麦克斯韦方程与电磁波](https://openstax.org/books/university-physics-volume-2/pages/16-1-maxwells-equations-and-electromagnetic-waves)。
 - [NOAA：声呐怎样工作](https://oceanservice.noaa.gov/facts/sonar.html)。
 - [NASA：电磁波谱](https://science.nasa.gov/ems/)。
-
-本文六张静态插图为本站绘制的概念示意图，用于辅助理解，不是实测图像或数值模拟结果。圆柱散射动画单独用于展示波场的变化，不是实拍视频。推导采用文中说明的理想化条件；工程中的模型需要根据材料、几何和实验条件进一步细化。

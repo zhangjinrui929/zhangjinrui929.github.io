@@ -26,7 +26,17 @@
   }
 
   title.textContent = post.title;
-  document.title = `${post.title} · Jinrui Zhang`;
+  const authorName = [window.SITE_DATA.profile.nameZh, window.SITE_DATA.profile.nameEn].filter(Boolean).join(" ");
+  document.title = `${post.title} · ${authorName}`;
+  document.querySelector('meta[name="description"]').content = post.excerpt;
+  // 每篇文章有独立的规范地址，不能把所有查询参数页面归并成同一篇。
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.append(canonical);
+  }
+  canonical.href = new URL(post.href, "https://zhangjinrui929.github.io/").href;
   document.querySelector("#post-excerpt").textContent = post.excerpt;
   document.querySelector("#post-date").textContent = post.dateLabel;
   document.querySelector("#post-reading-time").textContent = `预计阅读 ${post.readTime}`;
