@@ -52,8 +52,8 @@ $$
 
 把这件事放进动画里，就更容易看清了。下面的圆柱散射动画并排展示了三幅图：左边是没有障碍物时的**入射场**，中间是物体引起的额外变化——**散射场**，右边是两者叠加后的**总场**。先盯住右图中圆形边界附近的条纹，再与左图对比：原来规则的波动图案，被物体改变了。
 
-<figure id="cylinder-scattering-video">
-  <video controls playsinline loop preload="metadata" poster="../../assets/scattering-intro/cylinder-scattering-poster.png" aria-label="圆柱散射动画：入射场、散射场与总场的对比">
+<figure id="cylinder-point-source">
+  <video controls playsinline loop preload="metadata" poster="../../assets/scattering-intro/point-source-poster.png" aria-label="圆柱散射动画：入射场、散射场与总场的对比">
     <source src="../../assets/scattering-intro/cylinder_point_source.mp4" type="video/mp4">
     你的浏览器不支持内嵌视频，请使用下方链接打开 MP4。
   </video>

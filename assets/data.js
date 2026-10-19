@@ -53,6 +53,6 @@ window.SITE_DATA = {
   ],
   posts: [
     { slug: "wave-scattering-notes", title: "波遇见世界：从水面涟漪到散射方程", excerpt: "从一盆水里的波纹出发，认识声呐、雷达与超声检测，再一步步推导弦振动、声波和电磁波的方程。", date: "2026-10-19", dateLabel: "2026.10.19", readTime: "30 min", tags: ["科普", "波散射", "物理建模"], href: "blog/post.html?slug=wave-scattering-notes", featured: true },
-    { slug: "layered-media-notes", title: "示意博客：层状介质中的多粒子问题", excerpt: "一篇带图片与行间公式的写作示范，说明如何介绍研究背景和引用自己的预印本。", date: "2026-09-29", dateLabel: "示意文章 · 2026.09", readTime: "6 min", tags: ["示意文章", "层状介质"], href: "blog/post.html?slug=layered-media-notes", featured: true }
+    { slug: "layered-media-notes", title: "由果溯因：从敲西瓜到反散射成像", excerpt: "从敲西瓜、听接水声到 CT 与雷达，认识反问题的存在性、唯一性和稳定性，再用波动方程与可复现算例理解反障碍成像。", date: "2026-10-19", dateLabel: "2026.10.19", readTime: "25 min", tags: ["科普", "反问题", "反散射成像"], href: "blog/post.html?slug=layered-media-notes", featured: true }
   ]
 };
