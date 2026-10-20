@@ -36,7 +36,7 @@ const hero = `<div class="hero-copy">
     <div class="profile-links">${p.links.map(link=>`<a class="text-link" href="${esc(link.href)}">${esc(link.label)}</a>`).join('\n')}</div>
   </div>
 </aside>`;
-const cards = posts.filter(post => post.featured).map(post => `<article class="post-card">
+const cards = [...posts].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 2).map(post => `<article class="post-card">
   <a class="post-card-link" href="${esc(post.href)}">
     <div class="post-card-top"><time datetime="${esc(post.date)}">${esc(post.dateLabel)}</time><span>${esc(post.readTime)}</span></div>
     <h3>${esc(post.title)}</h3><p>${esc(post.excerpt)}</p>
@@ -66,7 +66,7 @@ for (const [file,title,desc,url] of pages) {
   }
   fs.writeFileSync(target,html);
 }
-const urls = [...pages.map(p=>p[3]),...posts.map(post=>new URL(post.href,base).href)];
+const urls = [...new Set([...pages.map(p=>p[3]),...posts.map(post=>new URL(post.href,base).href)])];
 // Deliberately omit lastmod instead of inventing modification dates.
 fs.writeFileSync(path.join(root,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url=>`  <url><loc>${esc(url)}</loc></url>`).join('\n')}\n</urlset>\n`);
 console.log(`Updated three page headers, static profile/blog links, Person data and ${urls.length} sitemap URLs.`);

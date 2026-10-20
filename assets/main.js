@@ -165,8 +165,9 @@
 
     const posts = document.querySelector("#featured-posts");
     if (posts) {
-      posts.innerHTML = data.posts
-        .filter((item) => item.featured)
+      posts.innerHTML = [...data.posts]
+        .sort((a, b) => b.date.localeCompare(a.date))
+        .slice(0, 2)
         .map(postTemplate)
         .join("");
     }
@@ -250,7 +251,9 @@
         .map((tag, index) => `<button type="button" class="filter-chip${index === 0 ? " is-active" : ""}" data-filter="${tag === "全部" ? "all" : escapeHtml(tag)}">${escapeHtml(tag)}</button>`)
         .join("");
     }
-    if (list) list.innerHTML = data.posts.map(postTemplate).join("");
+    if (list) list.innerHTML = [...data.posts]
+      .sort((a, b) => b.date.localeCompare(a.date))
+      .map(postTemplate).join("");
     setupFilters(".post-card", "#blog-search", "#blog-tags", "tags");
   }
 
