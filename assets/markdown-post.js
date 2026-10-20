@@ -80,6 +80,60 @@
 
   const markdownUrl = new URL(`posts/${encodeURIComponent(slug)}.md`, window.location.href);
 
+  // Build the navigation from the actual Markdown headings, so new posts need no manual TOC.
+  function buildTableOfContents() {
+    const toc = document.querySelector("#article-toc");
+    const list = document.querySelector("#toc-list");
+    const headings = [...content.querySelectorAll("h2, h3")];
+    if (!toc || !list || !headings.length) return;
+    const links = headings.map((heading, index) => {
+      if (!heading.id) {
+        let id = `section-${index + 1}`;
+        while (document.getElementById(id)) id += "-heading";
+        heading.id = id;
+      }
+      const item = document.createElement("li");
+      if (heading.tagName === "H3") item.className = "toc-subheading";
+      const link = document.createElement("a");
+      link.href = `#${encodeURIComponent(heading.id)}`;
+      link.textContent = heading.textContent;
+      item.append(link);
+      list.append(item);
+      return link;
+    });
+    toc.hidden = false;
+    toc.open = window.matchMedia("(min-width: 761px)").matches;
+    let scheduled = false;
+    function updateActive() {
+      let active = 0;
+      headings.forEach((heading, index) => {
+        if (heading.getBoundingClientRect().top <= 125) active = index;
+      });
+      links.forEach((link, index) => {
+        if (index === active) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+      scheduled = false;
+    }
+    window.addEventListener("scroll", () => {
+      if (!scheduled) {
+        scheduled = true;
+        window.requestAnimationFrame(updateActive);
+      }
+    }, { passive: true });
+    updateActive();
+    // The article loads asynchronously, so honor an incoming chapter link after rendering.
+    function restoreAnchor() {
+      if (!window.location.hash) return;
+      let id;
+      try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
+      const target = document.getElementById(id);
+      if (target && content.contains(target)) target.scrollIntoView();
+    }
+    restoreAnchor();
+    return restoreAnchor;
+  }
+
   // 重新验证正文缓存，避免更新后继续展示旧文章。
   fetch(markdownUrl, { cache: "no-cache" })
     .then((response) => {
@@ -90,6 +144,19 @@
       const { text, math } = protectMath(markdown);
       const html = restoreMath(window.marked.parse(text), math);
       content.innerHTML = window.DOMPurify.sanitize(html);
+      // Keep table semantics while allowing wide tables to scroll on small screens.
+      content.querySelectorAll("table").forEach((table, index) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "article-table";
+        wrapper.setAttribute("role", "region");
+        wrapper.setAttribute("aria-label", `表格 ${index + 1}，可横向滚动`);
+        wrapper.tabIndex = 0;
+        table.before(wrapper);
+        wrapper.append(table);
+        table.querySelectorAll("thead th").forEach((cell) => {
+          cell.setAttribute("scope", "col");
+        });
+      });
 
       // 相对路径以 .md 所在目录为准，兼容 VS Code 预览和 GitHub Pages。
       const mediaAttributes = [
@@ -112,7 +179,15 @@
         video.load();
       });
 
-      window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };
+      const restoreAnchor = buildTableOfContents();
+      window.MathJax = {
+        tex: { inlineMath: [["\\(", "\\)"]] },
+        startup: {
+          pageReady: () => window.MathJax.startup.defaultPageReady().then(() => {
+            if (restoreAnchor) restoreAnchor();
+          })
+        }
+      };
       const script = document.createElement("script");
       script.src = "https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js";
       script.defer = true;

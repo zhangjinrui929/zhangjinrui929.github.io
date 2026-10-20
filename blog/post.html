@@ -8,31 +8,34 @@
     <link rel="icon" href="../assets/avatar-placeholder.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../assets/styles.css?v=20261019-video-1">
     <link rel="stylesheet" href="../assets/compact.css?v=20261020-1">
+    <link rel="stylesheet" href="../assets/blog-reading.css?v=20261020-1">
     <script src="../assets/data.js?v=20261019-inverse-1" defer></script>
     <script src="../assets/main.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/16.3.0/lib/marked.umd.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.4.16/purify.min.js" defer></script>
-    <script src="../assets/markdown-post.js?v=20261019-seo-1" defer></script>
+    <script src="../assets/markdown-post.js?v=20261020-toc-1" defer></script>
   </head>
   <body id="top" data-page="post" data-base="..">
     <header class="site-header" id="site-header"></header>
 
     <main class="page-shell article-shell">
       <aside class="article-aside">
-        <div>
-          <p class="article-label">RESEARCH NOTES / BLOG</p>
-          <div class="article-meta">
-            <p id="post-date"></p>
-            <p id="post-reading-time"></p>
-          </div>
-        </div>
         <a class="article-back" href="index.html">← 返回博客</a>
+        <details class="article-toc" id="article-toc" hidden>
+          <summary>本文目录</summary>
+          <nav aria-label="文章章节目录"><ol id="toc-list"></ol></nav>
+        </details>
       </aside>
 
       <!-- 长文章直接显示，避免整篇进入视口的比例达不到动画触发阈值。 -->
       <article>
         <header class="article-head">
+          <p class="article-label">RESEARCH NOTES / BLOG</p>
           <h1 id="post-title">正在加载文章…</h1>
+          <div class="article-meta">
+            <span id="post-date"></span>
+            <span id="post-reading-time"></span>
+          </div>
           <p class="article-deck" id="post-excerpt"></p>
         </header>
         <div class="article-content" id="post-content" aria-live="polite">正在加载正文…</div>
