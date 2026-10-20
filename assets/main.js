@@ -55,7 +55,6 @@
                 `<a href="${path(href)}"${page === key || (page === "post" && key === "blog") ? ' aria-current="page"' : ""}>${label}</a>`
             )
             .join("")}
-          <a href="${path("index.html#contact")}">联系</a>
         </nav>
         <button class="theme-toggle" type="button" aria-label="切换深浅色模式" title="切换深浅色模式">
           <span class="theme-icon theme-icon-sun" aria-hidden="true">☼</span>
@@ -106,7 +105,6 @@
         <aside class="profile-card reveal" aria-label="个人信息卡">
           <div class="portrait-wrap">
             <img src="${path(profile.photo)}" alt="${escapeHtml(profile.nameEn)}的个人照片">
-            <span class="availability-dot" title="${escapeHtml(profile.status)}"></span>
           </div>
           <div class="profile-card-body">
             <p class="profile-card-label">CURRENTLY</p>

@@ -177,6 +177,32 @@
         video.controls = true;
         video.playsInline = true;
         video.load();
+        // Show an unmodified image before playback instead of the browser's dimmed poster.
+        if (video.poster) {
+          const cover = document.createElement("button");
+          cover.type = "button";
+          cover.className = "video-cover";
+          cover.setAttribute("aria-label", `播放视频：${video.getAttribute("aria-label") || "动画"}`);
+          const image = document.createElement("img");
+          image.src = video.poster;
+          image.alt = "";
+          const label = document.createElement("span");
+          label.textContent = "▶ 播放动画";
+          cover.append(image, label);
+          video.before(cover);
+          video.hidden = true;
+          image.addEventListener("error", () => {
+            video.hidden = false;
+            cover.remove();
+          });
+          cover.addEventListener("click", () => {
+            cover.hidden = true;
+            video.hidden = false;
+            video.focus();
+            // If playback is blocked, leave the native controls available for retry.
+            video.play().catch(() => {});
+          });
+        }
       });
 
       const restoreAnchor = buildTableOfContents();
