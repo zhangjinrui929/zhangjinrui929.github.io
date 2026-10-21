@@ -126,6 +126,7 @@
     const news = document.querySelector("#news-list");
     if (news) {
       news.innerHTML = data.news
+        .slice(0, 4)
         .map(
           (item) => `
             <article class="news-item reveal">

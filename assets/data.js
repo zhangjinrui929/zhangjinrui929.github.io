@@ -22,6 +22,7 @@ window.SITE_DATA = {
     ]
   },
   news: [
+    { date: "2026.10", text: "两篇关于障碍正反散射问题统计框架的预印本上线 arXiv。", linkLabel: "查看预印本", href: "publications.html" },
     { date: "2026.08", text: "两篇关于层状介质弹性散射快速求解与三维多极展开谱收敛的预印本上线 arXiv。", linkLabel: "查看预印本", href: "publications.html" },
     { date: "2026.05", text: "关于层状介质中多粒子选择性聚焦的论文发表于 SIAM Journal on Imaging Sciences。", linkLabel: "查看论文", href: "https://doi.org/10.1137/25M1761410" },
     { date: "2025.12", text: "获得浙江大学 2025 年优秀博士学位论文。", linkLabel: "查看经历", href: "index.html#journey" }
@@ -43,8 +44,10 @@ window.SITE_DATA = {
     { year: "2018", title: "国家奖学金；南京理工大学理学院院长奖章" }
   ],
   publications: [
-    { year: "2026", type: "Preprint", title: "A fast solver for many-particle elastic scattering in layered media", authors: "Jinrui Zhang, Yixiao He, Jun Lai", venue: "arXiv:2608.26875", note: "New", featured: false, links: [{ label: "arXiv", href: "https://arxiv.org/abs/2608.26875" }, { label: "PDF", href: "https://arxiv.org/pdf/2608.26875" }] },
-    { year: "2026", type: "Preprint", title: "Spectral Convergence of the Multipole Expansion Method for Acoustic Scattering in Three Dimensions", authors: "Jinrui Zhang, Jun Lai", venue: "arXiv:2608.26884", note: "New", featured: false, links: [{ label: "arXiv", href: "https://arxiv.org/abs/2608.26884" }, { label: "PDF", href: "https://arxiv.org/pdf/2608.26884" }] },
+    { year: "2026", type: "Preprint", title: "A Statistical Imaging Framework for Inverse Obstacle Scattering and Its Resolution Analysis", authors: "Jinrui Zhang, Hai Zhang", venue: "arXiv:2610.28553", note: "New", featured: false, links: [{ label: "arXiv", href: "https://arxiv.org/abs/2610.28553" }, { label: "PDF", href: "https://arxiv.org/pdf/2610.28553" }] },
+    { year: "2026", type: "Preprint", title: "A covariance-based reduced-order framework for solving acoustic scattering problems", authors: "Shiwei Sun, Hai Zhang, Jinrui Zhang", venue: "arXiv:2609.07083", note: "New", featured: false, links: [{ label: "arXiv", href: "https://arxiv.org/abs/2609.07083" }, { label: "PDF", href: "https://arxiv.org/pdf/2609.07083" }] },
+    { year: "2026", type: "Preprint", title: "A fast solver for many-particle elastic scattering in layered media", authors: "Jinrui Zhang, Yixiao He, Jun Lai", venue: "arXiv:2608.26875", note: "", featured: false, links: [{ label: "arXiv", href: "https://arxiv.org/abs/2608.26875" }, { label: "PDF", href: "https://arxiv.org/pdf/2608.26875" }] },
+    { year: "2026", type: "Preprint", title: "Spectral Convergence of the Multipole Expansion Method for Acoustic Scattering in Three Dimensions", authors: "Jinrui Zhang, Jun Lai", venue: "arXiv:2608.26884", note: "", featured: false, links: [{ label: "arXiv", href: "https://arxiv.org/abs/2608.26884" }, { label: "PDF", href: "https://arxiv.org/pdf/2608.26884" }] },
     { year: "2026", type: "Journal", title: "Selective Focusing of Multiple Particles in a Layered Medium", authors: "Jun Lai, Jinrui Zhang", venue: "SIAM Journal on Imaging Sciences, 19(2): 1110–1136", note: "", featured: true, links: [{ label: "DOI", href: "https://doi.org/10.1137/25M1761410" }, { label: "arXiv", href: "https://arxiv.org/abs/2505.19524" }] },
     { year: "2025", type: "Journal", title: "Selective focusing of multiple traction-free elastic particles", authors: "Jinrui Zhang, Jun Lai", venue: "Inverse Problems and Imaging, 19(6): 1245–1267", note: "", featured: false, links: [{ label: "DOI", href: "https://doi.org/10.3934/ipi.2025014" }] },
     { year: "2025", type: "Journal", title: "Brief Implementation of Adaptive Fast Multipole Method Based on MATLAB", authors: "Jun Lai, Jinrui Zhang", venue: "Mathematica Numerica Sinica, 47(1): 1–20", note: "", featured: false, links: [{ label: "DOI", href: "https://doi.org/10.12286/jssx.j2024-1267" }, { label: "Code", href: "https://gitee.com/lai123jun/adaptive_fmm" }] },
