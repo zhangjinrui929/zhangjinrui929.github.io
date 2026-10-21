@@ -18,7 +18,7 @@ window.SITE_DATA = {
     links: [
       { label: "Email", href: "mailto:jinruizhang@ust.hk" },
       { label: "Google Scholar", href: "https://scholar.google.com/citations?user=vPo_tkkAAAAJ&hl=zh-CN" },
-      { label: "zhihu", href: "https://www.zhihu.com/people/zhang-jin-rui-58-26" }
+      { label: "ResearchGate", href: "https://www.researchgate.net/profile/Jinrui-Zhang-9?ev=hdr_xprf" }
     ]
   },
   news: [
