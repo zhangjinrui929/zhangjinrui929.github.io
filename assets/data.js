@@ -38,6 +38,7 @@ window.SITE_DATA = {
     { period: "2016.09 — 2020.06", title: "信息与计算科学学士", place: "南京理工大学", detail: "" }
   ],
   awards: [
+    { year: "2025", title: "浙江省优秀博士学位论文" },
     { year: "2025", title: "浙江大学优秀博士学位论文" },
     { year: "2025", title: "浙江省优秀毕业生" },
     { year: "2022", title: "浙江大学优秀研究生" },
