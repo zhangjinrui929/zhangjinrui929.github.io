@@ -22,6 +22,7 @@ window.SITE_DATA = {
     ]
   },
   news: [
+    { date: "2026.11", text: "博士学位论文获评浙江省 2025 年优秀博士学位论文。", linkLabel: "查看荣誉", href: "index.html#journey" },
     { date: "2026.10", text: "两篇关于障碍正反散射问题统计框架的预印本上线 arXiv。", linkLabel: "查看预印本", href: "publications.html" },
     { date: "2026.08", text: "两篇关于层状介质弹性散射快速求解与三维多极展开谱收敛的预印本上线 arXiv。", linkLabel: "查看预印本", href: "publications.html" },
     { date: "2026.05", text: "关于层状介质中多粒子选择性聚焦的论文发表于 SIAM Journal on Imaging Sciences。", linkLabel: "查看论文", href: "https://doi.org/10.1137/25M1761410" },
